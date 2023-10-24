@@ -1,0 +1,11 @@
+#!/bin/sh
+
+file="/home/obey/.config/dunst/dunstrc"
+sed -i "s/\"#.*#\$color0/\"$(xrdb -query | grep -e "*color0:" | awk '{print $2}')\" #\$color0/g" $file
+sed -i "s/\"#.*#\$color1/\"$(xrdb -query | grep -e "*color1:" | awk '{print $2}')\" #\$color1/g" $file
+sed -i "s/\"#.*#\$color2/\"$(xrdb -query | grep -e "*color2:" | awk '{print $2}')\" #\$color2/g" $file
+sed -i "s/\"#.*#\$color3/\"$(xrdb -query | grep -e "*color3:" | awk '{print $2}')\" #\$color3/g" $file
+sed -i "s/\"#.*#\$color4/\"$(xrdb -query | grep -e "*color4:" | awk '{print $2}')\" #\$color4/g" $file
+sed -i "s/\"#.*#\$color5/\"$(xrdb -query | grep -e "*color5:" | awk '{print $2}')\" #\$color5/g" $file
+sed -i "s/\"#.*#\$color6/\"$(xrdb -query | grep -e "*color6:" | awk '{print $2}')\" #\$color6/g" $file
+sed -i "s/\"#.*#\$color7/\"$(xrdb -query | grep -e "*color7:" | awk '{print $2}')\" #\$color7/g" $file

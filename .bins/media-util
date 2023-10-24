@@ -1,0 +1,17 @@
+#!/bin/sh
+#
+status="$(playerctl status)"
+delim=" - "
+if [ $status = "Playing" ]; then
+  statusIndicator="▶️ "
+elif [ $status = "Paused" ]; then
+  statusIndicator="⏸️ "
+elif [ $status = "Stopped" ]; then
+  statusIndicator=""
+  delim=""
+fi
+
+artist="$(playerctl metadata 2>/dev/null | grep artist | head -n 1 | sed "s/.*:artist[^a-zA-Z0-9]*//g")"
+title="$(playerctl metadata 2>/dev/null | grep title | tail -n 1 | sed "s/.*:title[^a-zA-Z0-9]*//g")"
+
+echo "{\"text\": \"$statusIndicator${artist:0:25}$delim${title:0:45}\", \"class\": \"$status\" }"

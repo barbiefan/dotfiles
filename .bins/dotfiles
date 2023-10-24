@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+GIT="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+
+add () {
+  $GIT add $($GIT ls-files --exclude-standard --others | fzf -m --prompt='Add:' --preview='bat {}' --preview-label='PREVIEW' --layout=reverse --marker='+')
+}
+
+ignore () {
+  $($GIT ls-files --exclude-standard --others >> $HOME/.gitignore)
+}
+
+update () {
+  $GIT add $($GIT ls-files --modified)
+}
+
+case $1 in
+  "add") add ;;
+  "ignore") ignore ;;
+  "update") update ;;
+  *) $GIT "$@" ;;
+esac

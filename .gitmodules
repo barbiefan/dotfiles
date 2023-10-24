@@ -1,0 +1,12 @@
+[submodule "Documents/git/StartPage"]
+	path = Documents/git/StartPage
+	url = https://github.com/barbiefan/StartPage.git
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = git@github.com:barbiefan/nvim_config.git
+[submodule ".bins/steam_theme"]
+	path = .bins/steam_theme
+	url = git@github.com:barbiefan/steam_theme.git
+[submodule "Pictures/wallpaper"]
+	path = Pictures/wallpaper
+	url = git@github.com:barbiefan/wallpapers.git

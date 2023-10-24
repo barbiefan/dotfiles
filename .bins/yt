@@ -1,0 +1,4 @@
+#!/bin/bash
+export YTFZF_THUMB_DISP_METHOD="chafa"
+export DISPLAY=:0
+ytfzf -t -f --preview-side=right --detach --sort --pages=2

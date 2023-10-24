@@ -1,0 +1,3 @@
+#/bin/bash
+
+rofi -modes "combi,filebrowser,ssh,keys" -show combi -combi-modes "drun,run" -theme ./.local/share/rofi/themes/run.rasi

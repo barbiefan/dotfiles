@@ -1,0 +1,308 @@
+/*
+ * vim: ft=less
+ */
+@import "/home/obey/.cache/wal/colors-waybar.css";
+
+@define-color cc-bg alpha(@background, 0.7);
+
+@define-color noti-border-color alpha(@color3, 0);
+@define-color noti-bg alpha(@color0, 0.8);
+@define-color noti-bg-darker alpha(@color0, 0.8);
+@define-color noti-bg-hover @color1;
+@define-color noti-bg-focus @color5;
+@define-color noti-close-bg @color0;
+@define-color noti-close-bg-hover @color1;
+
+@define-color text-color @foreground;
+@define-color text-color-disabled @color8;
+
+@define-color bg-selected @color2;
+
+* {
+  font-family: "Comfortaa", "Unifont";
+  font-size: 18px;
+}
+
+* > button {
+  background: transparent;
+  border: 0px dashed transparent;
+  border-radius: 20px;
+  outline: none;
+}
+
+* > button:hover {
+  background-color: @noti-bg-focus;
+  border: 0px dashed transparent;
+  border-radius: 20px;
+  outline: none;
+}
+
+.widget-buttons-grid .notification-row {
+  outline: none;
+}
+
+.notification {
+  box-shadow: none;
+  padding: 0;
+  margin: 0px;
+}
+
+.notification-row:focus,
+.notification-row:hover {
+  background: transparent;
+}
+
+.notification-content {
+  padding: 20px;
+}
+
+.notification-default-action {
+  padding: 0px;
+  margin: 0;
+  background: @noti-bg;
+  transition: all 0.15s ease-in-out;
+  border-radius: 20px;
+}
+.notification-default-action:hover {
+  background: @noti-bg-focus;
+}
+.notification-default-action:not(:only-child) {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.notification-action {
+  border-radius: 0;
+  padding: 4px;
+  margin: 0;
+  background: @noti-bg;
+  transition: all 0.15s ease-in-out;
+}
+.notification-action:hover {
+  border-radius: 0;
+  background: @noti-bg-focus;
+}
+.notification-action:first-child {
+  border-bottom-left-radius: 20px;
+}
+.notification-action:last-child {
+  border-bottom-right-radius: 20px;
+}
+
+.close-button {
+  background: @noti-close-bg;
+  color: @text-color;
+  text-shadow: none;
+  padding: 0;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-right: 16px;
+  box-shadow: none;
+  border: none;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.close-button:hover {
+  box-shadow: none;
+  background: @noti-close-bg-hover;
+  transition: all 0.15s ease-in-out;
+  border: none;
+}
+
+/* add bottom border radius to eliminate clipping */
+.inline-reply {
+  margin-top: 8px;
+}
+.inline-reply-entry {
+  background: @noti-bg-darker;
+  color: @text-color;
+  caret-color: @text-color;
+  border-radius: 20px;
+}
+.inline-reply-button {
+  margin-left: 4px;
+  background: @noti-bg;
+  border-radius: 20px;
+  color: @text-color;
+}
+.inline-reply-button:disabled {
+  background: initial;
+  color: @text-color-disabled;
+}
+.inline-reply-button:hover {
+  background: @noti-bg-hover;
+}
+
+.image {
+}
+
+.body-image {
+  margin-top: 6px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.summary {
+  font-size: 16px;
+  font-weight: bold;
+  background: transparent;
+  color: @text-color;
+  text-shadow: none;
+}
+
+.time {
+  font-size: 16px;
+  font-weight: bold;
+  background: transparent;
+  color: @text-color;
+  text-shadow: none;
+  margin-right: 18px;
+}
+
+.body {
+  font-size: 15px;
+  font-weight: normal;
+  background: transparent;
+  color: @text-color;
+  text-shadow: none;
+}
+
+.control-center {
+  background: alpha(@background, 0.7);
+  border-radius: 20px;
+}
+
+.control-center-list {
+  background: transparent;
+}
+
+.control-center-list-placeholder {
+  opacity: 0.5;
+}
+
+.floating-notifications {
+  background: transparent;
+}
+
+/* Window behind control center and on all other monitors */
+.blank-window {
+  background-color: transparent;
+}
+
+/*** Widgets ***/
+
+/* Title widget */
+.widget-title {
+  margin: 8px 20px 8px 20px;
+  font-size: 1.5rem;
+}
+
+/* DND widget */
+.widget-dnd {
+  margin: 8px 20px 8px 20px;
+  font-size: 1.1rem;
+}
+.widget-dnd > switch {
+  font-size: initial;
+  border-radius: 20px;
+  background: @noti-bg;
+  box-shadow: none;
+}
+.widget-dnd > switch:checked {
+  background: @bg-selected;
+}
+.widget-dnd > switch slider {
+  background: @noti-bg-hover;
+  border-radius: 20px;
+}
+
+/* Label widget */
+.widget-label {
+  margin: 8px;
+}
+.widget-label > label {
+  font-size: 1.1rem;
+}
+
+/* Mpris widget */
+.widget-mpris {
+  /* The parent to all players */
+}
+.widget-mpris-player {
+  padding: 8px;
+  margin: 8px;
+}
+
+.widget-mpris-player > box > image {
+  min-width: 128px;
+  min-height: 128px;
+}
+
+.widget-mpris-player > box > button > image {
+  min-width: 64px;
+  min-height: 64px;
+  border-radius: 20px;
+}
+
+.widget-mpris-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.widget-mpris-subtitle {
+  font-size: 1.1rem;
+}
+
+/* Buttons widget */
+.widget-buttons-grid {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  background-color: red;
+}
+
+.menu-button-bar {
+  padding: 10px;
+  margin: 10px 0px 0px 0px;
+  border-radius: 20px;
+  background-color: transparent;
+}
+
+.menu-button-bar > box > button {
+  padding: 10px 40px 10px 40px;
+  margin: 0px 10px 0px 10px;
+  border-radius: 20px;
+}
+
+/* Volume widget */
+.widget-volume {
+  background-color: transparent;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 20px;
+}
+.per-app-volume {
+  background-color: @noti-bg-alt;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  border-radius: 20px;
+}
+
+.per-app-volume > row {
+  padding: 0px;
+}
+
+.per-app-volume * > scale {
+  margin: 0px 25px 0px 0px;
+}
+.widget-volume *:not(button) > label {
+  padding: 0px 0px 0px 0px;
+  font-size: 20px;
+  min-width: 180px;
+}
+
+/* Title widget */
+.widget-inhibitors {
+  margin: 8px;
+  font-size: 1.5rem;
+}

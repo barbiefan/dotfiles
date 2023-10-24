@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+hyprctl dispatch focuswindow $SWAYNC_DESKTOP_ENTRY

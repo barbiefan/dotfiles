@@ -1,0 +1,128 @@
+@import "/home/obey/.cache/wal/colors-waybar.css";
+
+* {
+  font-family: "Comfortaa", "Unifont";
+  font-size: 18px;
+  min-height: 0px;
+  border-radius: 20px;
+}
+
+label {
+  padding: 10px 0px 10px 0px;
+}
+
+tooltip * {
+  background-color: transparent;
+}
+tooltip label {
+  background-color: transparent;
+  font-family: "Source Code Pro Mono", "Unifont";
+  /* min-width: 750px; */
+}
+
+.modules-right {
+  padding-left: 10px;
+  margin-top: 20px;
+}
+
+.modules-left {
+  padding-left: 10px;
+  padding-bottom: 20px;
+}
+
+.modules-center {
+  padding-left: 10px;
+}
+
+#workspaces {
+}
+
+#workspaces button {
+  background-color: alpha(@background, 0.7);
+  border: 3px solid @color5;
+  color: @color7;
+  margin-bottom: 4px;
+}
+#workspaces button.active {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 3px solid @color2;
+}
+#workspaces button.urgent {
+  background-color: @color1;
+}
+
+#cpu,
+#custom-mem,
+#custom-gpu,
+#tray,
+#clock {
+  background-color: alpha(@background, 0.7);
+  color: @color7;
+  border: 3px solid @color2;
+  margin-top: 4px;
+}
+
+#cpu.mid {
+  background-color: #ffff55;
+  color: @background;
+}
+#cpu.heavy {
+  background-color: #ff5555;
+  color: @background;
+}
+
+#custom-mem.mid {
+  background-color: #ffff55;
+  color: @background;
+}
+#custom-mem.heavy {
+  background-color: #ff5555;
+  color: @background;
+}
+
+#custom-gpu.mid {
+  background-color: #ffff55;
+  color: @background;
+}
+#custom-gpu.heavy {
+  background-color: #ff5555;
+  color: @background;
+}
+
+#pulseaudio {
+  font-size: 17px;
+}
+#pulseaudio.sink.muted {
+  background-color: #ff5555;
+  color: @background;
+}
+#pulseaudio.source.source-muted {
+  background-color: #ff5555;
+  color: @background;
+}
+
+#custom-notification {
+  font-size: 20px;
+}
+
+@keyframes blink {
+  to {
+    background-color: transparent;
+    color: black;
+  }
+}
+
+#waybar {
+  background-color: transparent;
+}
+
+#window {
+  color: @color7;
+}
+
+window#waybar.brave-browser {
+  background-color: @color0;
+  border: 100px solid @color0;
+  border-radius: 0px;
+}

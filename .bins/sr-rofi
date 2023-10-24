@@ -1,0 +1,6 @@
+#!/bin/bash
+
+theme=$HOME/.local/share/rofi/themes/run.rasi
+ans=$(echo -e "Home\nStartpage :s\nYoutube :y\nGoogle :g\nYa Translate :tr\nYa Images :i" | rofi -dmenu -theme $theme -p "Search: ")
+
+sr $ans

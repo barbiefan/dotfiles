@@ -1,0 +1,11 @@
+#!/bin/sh
+
+perc="$(free | grep Mem | awk '{print $3/$2 * 100}' | sed 's/\..*//')"
+class="ok"
+if [ "$perc" -gt "50" ]; then
+    class="mid"
+fi
+if [ "$perc" -gt "75" ]; then
+    class="heavy"
+fi
+echo "{\"text\": \"A\", \"alt\": \"RAM\", \"tooltip\": \"$(free -hvtl | tr '\n' '\r')\", \"class\": \"$class\", \"percentage\": $perc }"

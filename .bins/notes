@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+notename="$(echo -e "$(ls /home/obey/.notes/)\ndelete" | rofi -dmenu -p 'note (ctrl to create): ')"
+if [ -z "$notename" ]; then
+    exit
+fi
+if [[ "$notename" == "delete" ]]; then
+    notename="$(ls /home/obey/.notes/ | rofi -dmenu -p 'note to delete: ')"
+    rm /home/obey/.notes/$notename
+    exit
+fi
+alacritty -t "#widget $notename" -e nvim "/home/obey/.notes/$notename"
+

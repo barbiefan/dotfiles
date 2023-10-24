@@ -1,0 +1,27 @@
+EDITOR='nvim'
+
+clip=clipboard
+
+wait=0.5
+xdotool_delay=30
+default_autotype='path :tab pass'
+
+password_length=16
+
+autotype="Alt+1"
+type_user="Alt+2"
+type_pass="Alt+3"
+open_url="Alt+4"
+copy_name="Alt+u"
+copy_url="Alt+l"
+copy_pass="Alt+p"
+show="Alt+o"
+copy_menu="Alt+c"
+action_menu="Alt+a"
+type_menu="Alt+t"
+help="Alt+h"
+switch="Alt+x"
+insert_pass="Alt+n"
+qrcode="Alt+q"
+previous_root="Shift+Left"
+next_root="Shift+Right"

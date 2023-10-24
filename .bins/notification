@@ -1,0 +1,21 @@
+#!/bin/bash
+export XDG_RUNTIME_DIR=/run/user/$(id -u)
+
+title=$1
+message=$2
+urgency=$3
+
+if [ -z "$title" ]; then
+    title=?title
+fi
+
+if [ -z "$message" ]; then
+    message=?message
+fi
+
+if [ -z "$urgency" ]; then
+    urgency=normal
+fi
+
+notify-send -a "System" -h "string:desktop-entry:i3" "$title" "$message" --urgency=$urgency
+

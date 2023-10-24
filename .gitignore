@@ -1,3 +1,4 @@
+.dotfiles/*
 .wine/*
 .w3m/*
 .swt/*
@@ -26,4 +27,19 @@ Templates/*
 Videos/*
 VirtualBox\ VMs/*
 windows/*
+.config/BraveSoftware/Brave-Browser/*
+.config/yandex-music-player/*
+.config/skypeforlinux/*
+.config/obs-studio/*
+.config/libreoffice/*
+.config/VirtualBox/*
+.config/fcast-receiver/*
+.config/discord/*
+.config/GIMP/*
+.local/*
+.themes/Default/*
+Documents/*
+!Documents/git/StartPage/*
+!Documents/VPN
+Documents/VPN/nlmk
 

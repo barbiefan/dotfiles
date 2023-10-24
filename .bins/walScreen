@@ -1,0 +1,4 @@
+~/.bins/colorful
+wal -qnte --backend $1 -i $2
+maim -i "$(xdotool getactivewindow)" ~/.cache/wal-backend-previews/$1.png
+exit

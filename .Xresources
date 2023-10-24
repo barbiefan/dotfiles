@@ -1,0 +1,96 @@
+Xft.dpi:       96
+Xft.antialias: true
+Xft.hinting:   true
+Xft.rgba:      rgb
+Xft.autohint:  false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+XTerm*background:        #222D31
+XTerm*foreground:        #d8d8d8
+XTerm*pointerColor:      #1ABB9B
+XTerm*faceName:          Fixed
+XTerm*faceSize:          11
+XTerm*reverseVideo:      on
+XTerm*selectToClipboard: true
+
+st*alpha: 0.9
+
+!*background:                      #262626
+!*foreground:                      #F8F8F8
+*fading:                          8
+*fadeColor:                       black
+*cursorColor:                     #1ABB9B
+*pointerColorBackground:          #2B2C2B
+*pointerColorForeground:          #16A085
+
+*background: #1E1E28
+*background-alt: #DD303040
+*foreground: #D7DAE0
+
+! Black + dark black
+*color0: #6E6C7C
+*color8: #706E7E
+
+! Red
+*color1: #E28C8C
+*color9: #E48E8E
+
+! Green
+*color2: #B3E1A3
+*color10: #B5E3A5
+
+! Yellow
+*color3: #EADDA0
+*color11: #ECDFA2
+
+! Blue
+*color4: #A4B9EF
+*color12: #A6BBF1
+
+! Magenta
+*color5: #C6AAE8
+*color13: #C8ACEA
+
+! Pink
+*color6: #F0AFE1
+*color14: #F2B1E3
+
+! Whites
+*color7: #D7DAE0
+*color15: #D9DCE2
+
+!! black dark/light
+!*color0:                          #101010
+!*color8:                          #404040
+!
+!!! red dark/light
+!*color1:                          #E84F4F
+!*color9:                          #D23D3D
+!
+!!! green dark/light
+!*color2:                          #B8D68C
+!*color10:                         #A0CF5D
+!
+!!! yellow dark/light
+!*color3:                          #E1AA5D
+!*color11:                         #F39D21
+!
+!!! blue dark/light
+!*color4:                          #7DC1CF
+!*color12:                         #4E9FB1
+!
+!!! magenta dark/light
+!*color5:                          #9B64FB
+!*color13:                         #8542FF
+!
+!!! cyan dark/light
+!*color6:                          #6D878D
+!*color14:                         #42717B
+!
+!!! white dark/light
+!*color7:                          #DDDDDD
+!*color15:                         #f8f8f8
+!
+Xcursor.theme: xcursor-breeze-snow
+Xcursor.size:                     0

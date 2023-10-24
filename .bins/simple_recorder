@@ -1,0 +1,10 @@
+#!/bin/bash
+
+pid="$(pgrep -f 'gpu-screen-recorder')"
+if [ -z $pid ]; then
+    filename="/home/obey/Videos/OBS/$(date +'%Y-%m-%d_%I_%M_%S')"
+    gpu-screen-recorder -w DP-1 -f 60 -a "$(pactl get-default-sink).monitor" -o "$filename.mp4"
+    /home/obey/.bins/notification "Screen Recorder" "File saved to $filename.mp4" normal
+else
+    kill -s SIGINT $pid
+fi

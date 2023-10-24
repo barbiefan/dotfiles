@@ -1,0 +1,12 @@
+#!/bin/sh
+
+perc="$(nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits | awk '{ printf "%s", $1}')"
+class="ok"
+if [ "$perc" -gt "50" ]; then
+    class="mid"
+fi
+if [ "$perc" -gt "75" ]; then
+    class="heavy"
+fi
+tooltip="# gpu     pid     type    sm   mem   enc   dec   command        \r# Idx     #        C/G     %     %     %     %   name           \r$(nvidia-smi pmon -c 1 | tail -n +3 | tr '\n' '\r')"
+echo "{\"text\": \"A\", \"alt\": \"GPU\", \"tooltip\": \"$tooltip\", \"class\": \"$class\", \"percentage\": $perc }"

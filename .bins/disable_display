@@ -1,0 +1,24 @@
+#!/bin/sh
+
+
+if [[ $XDG_SESSION_TYPE == wayland ]]; then
+    if [ "$(hyprctl monitors | grep dpmsStatus | awk '{print $2}')" == "1" ]; then
+        hyprctl dispatch dpms off
+    else
+        hyprctl dispatch dpms on
+    fi 
+elif [[ $XDG_SESSION_TYPE == x11 ]]; then
+    status=0
+    if [[ "$(playerctl status)" == "Playing" ]]; then
+        playerctl pause
+        status=1
+    fi
+
+    alacritty -e zsh -c 'xrandr --output DP-0 --off; read ans; xrandr --output DP-0 --mode 3440x1440 --rate 144; i3-msg -t run_command restart'
+
+    if [[ $status == 1 ]]; then
+        playerctl play
+    fi
+else
+    echo "unknown session type: $XDG_SESSION_TYPE"
+fi

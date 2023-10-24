@@ -1,0 +1,39 @@
+#!/bin/bash
+
+if [ -z "$(echo $1)" ]; then
+    exit
+fi
+
+case $1 in
+    ":y")
+        shift
+        url="https://www.youtube.com/results?search_query="
+        ;;
+    ":g")
+        shift
+        url="https://www.google.com/search?q="
+        ;;
+    ":tr")
+        shift
+        url="https://translate.yandex.com/?text="
+        ;;
+    ":i")
+        shift
+        url="https://yandex.ru/images/search?text="
+        ;;
+    ":s")
+        shift
+        url="https://www.startpage.com/do/search?q="
+        ;;
+    "Home")
+        shift
+        url="$HOME/Documents/git/StartPage/index.html"
+        ;;
+    *)
+        url="https://www.startpage.com/do/search?q="
+        ;;
+esac
+
+surf -bdfgn "$url$(echo -n $@ | jq -sRr @uri)" &
+sleep 0.1
+i3-msg -t run_command "[class="Surf"] focus"

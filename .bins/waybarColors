@@ -1,0 +1,20 @@
+#!/bin/sh
+
+file="/home/obey/.config/waybar/style.css"
+sed -i "s+#.*/\*color0\*/+$(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color0 ' | awk '{print $2}') /\*color0\*/+g" $file
+sed -i "s+#.*/\*color1\*/+$(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color1 ' | awk '{print $2}') /\*color1\*/+g" $file
+sed -i "s+#.*/\*color2\*/+$(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color2 ' | awk '{print $2}') /\*color2\*/+g" $file
+sed -i "s+#.*/\*color3\*/+$(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color3 ' | awk '{print $2}') /\*color3\*/+g" $file
+sed -i "s+#.*/\*color4\*/+$(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color4 ' | awk '{print $2}') /\*color4\*/+g" $file
+sed -i "s+#.*/\*color5\*/+$(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color5 ' | awk '{print $2}') /\*color5\*/+g" $file
+sed -i "s+#.*/\*color6\*/+$(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color6 ' | awk '{print $2}') /\*color6\*/+g" $file
+sed -i "s+#.*/\*color7\*/+$(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color7 ' | awk '{print $2}') /\*color7\*/+g" $file
+sed -i "s+#.*/\*color8\*/+$(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color8 ' | awk '{print $2}') /\*color8\*/+g" $file
+sed -i "s+#.*/\*color9\*/+$(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color9 ' | awk '{print $2}') /\*color9\*/+g" $file
+sed -i "s+#.*/\*color10\*/+$(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color10 ' | awk '{print $2}') /\*color10\*/+g" $file
+sed -i "s+#.*/\*color11\*/+$(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color11 ' | awk '{print $2}') /\*color11\*/+g" $file
+sed -i "s+#.*/\*color12\*/+$(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color12 ' | awk '{print $2}') /\*color12\*/+g" $file
+sed -i "s+#.*/\*color13\*/+$(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color13 ' | awk '{print $2}') /\*color13\*/+g" $file
+sed -i "s+#.*/\*color14\*/+$(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color14 ' | awk '{print $2}') /\*color14\*/+g" $file
+sed -i "s+#.*/\*color15\*/+$(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color15 ' | awk '{print $2}') /\*color15\*/+g" $file
+sed -i "s+#.*/\*color16\*/+$(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color16 ' | awk '{print $2}') /\*color16\*/+g" $file

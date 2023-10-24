@@ -1,0 +1,20 @@
+#!/bin/sh
+
+file="/home/obey/.config/hypr/hyprland.conf"
+sed -i "s+rgba.*#color0+rgba($(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color0 ' | awk '{print $2}' | sed 's/#//')ff) #color0+g" $file
+sed -i "s+rgba.*#color1+rgba($(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color1 ' | awk '{print $2}' | sed 's/#//')ff) #color1+g" $file
+sed -i "s+rgba.*#color2+rgba($(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color2 ' | awk '{print $2}' | sed 's/#//')ff) #color2+g" $file
+sed -i "s+rgba.*#color3+rgba($(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color3 ' | awk '{print $2}' | sed 's/#//')ff) #color3+g" $file
+sed -i "s+rgba.*#color4+rgba($(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color4 ' | awk '{print $2}' | sed 's/#//')ff) #color4+g" $file
+sed -i "s+rgba.*#color5+rgba($(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color5 ' | awk '{print $2}' | sed 's/#//')ff) #color5+g" $file
+sed -i "s+rgba.*#color6+rgba($(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color6 ' | awk '{print $2}' | sed 's/#//')ff) #color6+g" $file
+sed -i "s+rgba.*#color7+rgba($(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color7 ' | awk '{print $2}' | sed 's/#//')ff) #color7+g" $file
+sed -i "s+rgba.*#color8+rgba($(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color8 ' | awk '{print $2}' | sed 's/#//')ff) #color8+g" $file
+sed -i "s+rgba.*#color9+rgba($(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color9 ' | awk '{print $2}' | sed 's/#//')ff) #color9+g" $file
+sed -i "s+rgba.*#color10+rgba($(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color10 ' | awk '{print $2}' | sed 's/#//')ff) #color10+g" $file
+sed -i "s+rgba.*#color11+rgba($(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color11 ' | awk '{print $2}' | sed 's/#//')ff) #color11+g" $file
+sed -i "s+rgba.*#color12+rgba($(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color12 ' | awk '{print $2}' | sed 's/#//')ff) #color12+g" $file
+sed -i "s+rgba.*#color13+rgba($(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color13 ' | awk '{print $2}' | sed 's/#//')ff) #color13+g" $file
+sed -i "s+rgba.*#color14+rgba($(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color14 ' | awk '{print $2}' | sed 's/#//')ff) #color14+g" $file
+sed -i "s+rgba.*#color15+rgba($(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color15 ' | awk '{print $2}' | sed 's/#//')ff) #color15+g" $file
+sed -i "s+rgba.*#color16+rgba($(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color16 ' | awk '{print $2}' | sed 's/#//')ff) #color16+g" $file

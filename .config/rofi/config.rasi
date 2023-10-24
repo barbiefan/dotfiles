@@ -1,0 +1,8 @@
+@import "~/.cache/wal/colors-rofi-dark"
+@import "~/.cache/wal/colors-rofi-light"
+configuration {
+	show-icons: true;
+	sidebar-mode: true;
+}
+
+@theme "/home/obey/.local/share/rofi/themes/run.rasi"

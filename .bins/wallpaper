@@ -1,0 +1,121 @@
+#!/bin/sh
+
+########################
+##### decalrations #####
+########################
+
+##### wallpaper #####
+change_wallpaper() {
+    swww img "$filename" --transition-type grow --transition-pos 365,1395 --transition-step 255 --transition-fps 255 --transition-duration 1
+}
+
+##### discord #####
+discord_theme() {
+    pywal-discord -p $HOME/.cache/wal
+}
+
+##### steam #####
+steam_theme() {
+    cp $HOME/.cache/wal/colors-steam.css $HOME/.bins/steam_theme/custom/custom.css
+    # generally requires restart in order to change theme.
+    cd $HOME/.bins/steam_theme/
+    $HOME/.bins/steam_theme/install.py --custom-css
+    printf "steam done\n"
+}
+
+##### waybar #####
+waybar_theme() {
+    $HOME/.bins/waybarColors
+    killall -SIGUSR2 waybar
+    printf "waybar done\n"
+}
+
+##### swaync #####
+swaync_theme() {
+    swaync-client -rs
+    swaync-client -R
+    printf "swaync done\n"
+}
+
+##### hyprland #####
+hyprland_theme() {
+    $HOME/.bins/hyprColors
+    printf "hyprland done\n"
+}
+
+##### gtk2, gtk3, qt5, qt6 #####
+gtk_qt_theme() {
+    /opt/oomox/plugins/theme_oomox/change_color.sh $HOME/.cache/wal/colors-oomox
+    gradience-cli monet -n pywal -p $filename --theme dark
+    gradience-cli apply -n pywal --gtk both
+    gsettings set org.gnome.desktop.interface gtk-theme light
+    gsettings set org.gnome.desktop.interface gtk-theme oomox-colors-oomox
+    printf "oomox and gradience (gtk+qt) done\n"
+}
+
+##### telegram #####
+telegram_theme() {
+    wal-telegram --wal --tiled
+    printf "telegram done\n"
+}
+
+##### alacritty #####
+alacritty_theme() {
+    $HOME/.bins/alacrittyColors $HOME/.config/alacritty/alacritty.yml
+    printf "alacritty done\n"
+}
+
+##### StartPage #####
+StartPage_theme() {
+    sed -i "s@#.*/\*walcolorA\*/@$(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color0' | awk '{print $2}'); /\*walcolorA\*/@g" $HOME/Documents/git/StartPage/style.css
+    sed -i "s@#.*/\*walcolorB\*/@$(cat $HOME/.cache/wal/colors-kitty.conf | grep -e '^color2' | awk '{print $2}'); /\*walcolorB\*/@g" $HOME/Documents/git/StartPage/style.css
+    printf "StartPage done\n"
+}
+
+side_apps() {
+    discord_theme &
+    steam_theme &
+    waybar_theme &
+    swaync_theme &
+    hyprland_theme &
+    gtk_qt_theme &
+    telegram_theme &
+    alacritty_theme &
+    StartPage_theme &
+}
+
+#######################
+##### main script #####
+#######################
+
+# if no argument is provided, launch ranger to pick a wallpaper and rofi to pick a backend
+if [ -z $1 ]; then
+    $HOME/Documents/git/alacritty-sixel/target/release/alacritty -e ranger --choosefile /tmp/temp-ranger-file-picker $HOME/Pictures/wallpaper
+    filename="$(cat /tmp/temp-ranger-file-picker)"
+    printf "filename: $filename\n"
+    echo "" > /tmp/temp-ranger-file-picker
+    if [ -z "$filename" ]; then
+        exit 0
+        printf "no filename provided\n"
+    fi
+elif [[ $1 == "--random" ]]; then
+    filename="$(find $HOME/Pictures/wallpaper -regex '.*\.png\|.*\.jpg\|.*\.jpeg' | shuf -n 1)"
+else    
+    filename="$1"
+fi
+
+# change early so you don't feel a lag
+change_wallpaper &
+
+##### pywal #####
+wal -i "$filename"
+printf "wal done\n"
+
+# run other customizations after wal has generated a theme
+side_apps
+
+# remember wallpaper for reload
+echo "$filename" > $HOME/.bins/wallpaperpath
+printf "wallpaper remembered in $HOME/.bins/wallpaperpath\n"
+
+notification "Wallpaper:" "Set colors and themes to match wallpaper: $filename" low

@@ -1,0 +1,14 @@
+#!/bin/sh
+# hextorgb.sh
+#
+hexinput="$(echo "$1" | tr '[:lower:]' '[:upper:]')"  # uppercase-ing
+a="$(echo $hexinput | cut -c2-3)"
+b="$(echo $hexinput | cut -c4-5)"
+c="$(echo $hexinput | cut -c6-7)"
+
+r="$(echo "ibase=16; scale=4; $a / FF" | bc -l)"
+g="$(echo "ibase=16; scale=4; $b / FF" | bc -l)"
+b="$(echo "ibase=16; scale=4; $c / FF" | bc -l)"
+
+echo "0$r,0$g,0$b,1.0"
+exit 0

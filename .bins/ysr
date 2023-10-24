@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#gives a fzf list of all removeable packages from yay -Q, then removes the selected ones
+
+yay -Rc $(yay -Q | awk '{print $1}' | fzf -m --reverse --prompt 'package(es) to remove: ' --preview="yay -Si {}" --preview-window=:hidden --bind=space:toggle-preview)
