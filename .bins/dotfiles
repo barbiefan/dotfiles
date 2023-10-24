@@ -20,3 +20,5 @@ case $1 in
   "update") update ;;
   *) $GIT "$@" ;;
 esac
+
+$GIT status
