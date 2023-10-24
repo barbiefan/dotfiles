@@ -45,6 +45,7 @@ Documents/*
 !Documents/git/StartPage/
 !Documents/VPN
 Documents/VPN/nlmk
+.ssh
 
 .config/.semgrep/semgrep.log
 .config/.semgrep/settings.yml
