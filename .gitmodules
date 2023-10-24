@@ -10,3 +10,6 @@
 [submodule "Pictures/wallpaper"]
 	path = Pictures/wallpaper
 	url = git@github.com:barbiefan/wallpapers.git
+[submodule ".password-store"]
+	path = .password-store
+	url = git@github.com:barbiefan/pass.git
