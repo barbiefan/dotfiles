@@ -37,6 +37,7 @@ windows/*
 .config/discord/*
 .config/GIMP/*
 .local/*
+!.local/share/rofi
 .themes/Default/*
 Documents/*
 !Documents/git/StartPage/*
