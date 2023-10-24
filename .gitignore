@@ -37,11 +37,15 @@ windows/*
 .config/discord/*
 .config/GIMP/*
 .local/*
+!.local/share
+.local/share/*
+!.local/share/rofi
 .themes/Default/*
 Documents/*
-!Documents/git/StartPage/*
+!Documents/git/StartPage/
 !Documents/VPN
 Documents/VPN/nlmk
+.ssh
 
 .config/.semgrep/semgrep.log
 .config/.semgrep/settings.yml

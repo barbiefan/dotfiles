@@ -1,0 +1,103 @@
+/*
+ * sidetab-adapta theme,
+ * based on sidetab theme by deadguy.
+ *
+ * This theme has been dedicated to the public domain.
+ *
+ */
+
+@import "~/.cache/wal/colors-rofi-dark"
+
+configuration {
+        show-icons:   true;
+        sidebar-mode: true;
+}
+
+
+#window {
+        anchor:   center;
+        location: center;
+        width:    70%;
+        height:   70%;
+        children: [ horibox ];
+}
+
+#horibox {
+        children: [ entry, listview, mode-switcher ];
+}
+
+#listview {
+        columns: 5;       
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+entry {
+        expand: false;
+        margin: 10px;
+}
+
+element {
+        padding: 8px;
+}
+
+element normal.normal {
+        background-color: @normal-background;
+        text-color:       @normal-foreground;
+}
+
+element normal.urgent {
+        background-color: @urgent-background;
+        text-color:       @urgent-foreground;
+}
+
+element normal.active {
+        background-color: @active-background;
+        text-color:       @active-foreground;
+}
+
+element selected.normal {
+        background-color: @selected-normal-background;
+        text-color:       @selected-normal-foreground;
+        border:           0 4px solid 0 0;
+        border-color:     @accent2-color;
+}
+
+element selected.urgent {
+        background-color: @selected-urgent-background;
+        text-color:       @selected-urgent-foreground;
+}
+
+element selected.active {
+        background-color: @selected-active-background;
+        text-color:       @selected-active-foreground;
+}
+
+element alternate.normal {
+        background-color: @normal-background;
+        text-color:       @normal-foreground;
+}
+
+element alternate.urgent {
+        background-color: @urgent-background;
+        text-color:       @urgent-foreground;
+}
+
+element alternate.active {
+        background-color: @active-background;
+        text-color:       @active-foreground;
+}
+
+button {
+        padding: 8px;
+}
+
+button selected {
+        background-color: @active-background;
+        text-color:       @background-color;
+}
+
+/* vim: ft=css

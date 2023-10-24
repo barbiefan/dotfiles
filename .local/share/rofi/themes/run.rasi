@@ -1,0 +1,131 @@
+/*
+ * sidetab-adapta theme,
+ * based on sidetab theme by deadguy.
+ *
+ * This theme has been dedicated to the public domain.
+ *
+ */
+@import "~/.cache/wal/colors-rofi-dark"
+
+configuration {
+        font: "Comfortaa 12";
+}
+
+#window {
+        anchor:   center;
+        location: center;
+        width:    30%;
+        height:   30%;
+        padding: 30px;
+        children: [ horibox ];
+        border-radius: 20px;
+}
+
+
+
+#horibox {
+    orientation: vertical;
+    children:   [ inputbar, listview, mode-switcher];
+    padding: 0px;
+ }
+
+
+#inputbar {
+    orientation: horizontal;
+    text-color: @normal-foreground;
+    children:   [ prompt,entry];
+        border-radius: 20px;
+}
+
+#prompt {
+        expand: false;
+        padding:    5px;
+        text-color: @normal-foreground;
+        font: "Comfortaa 15";
+}
+
+
+#listview {
+    layout: vertical;
+    spacing: 0px;
+}
+
+#mode-switcher {
+
+        border-radius: 20px;
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+entry {
+        expand: true;
+        padding: 5px;
+        text-color: @normal-foreground;
+        font: "Comfortaa 15";
+}
+
+element {
+        padding: 4.5px;
+        border-radius: 20px;
+}
+
+element normal.normal {
+        background-color: @normal-background;
+        text-color:       @normal-foreground;
+}
+
+element normal.urgent {
+        background-color: @urgent-background;
+        text-color:       @urgent-foreground;
+}
+
+element normal.active {
+        background-color: @active-background;
+        text-color:       @active-foreground;
+}
+
+element selected.normal {
+        background-color: @selected-active-background;
+        text-color:       @selected-normal-foreground;
+}
+
+element selected.urgent {
+        background-color: @selected-urgent-background;
+        text-color:       @selected-urgent-foreground;
+}
+
+element selected.active {
+        background-color: @selected-active-background;
+        text-color:       @selected-active-foreground;
+}
+
+element alternate.normal {
+        background-color: @normal-background;
+        text-color:       @normal-foreground;
+}
+
+element alternate.urgent {
+        background-color: @urgent-background;
+        text-color:       @urgent-foreground;
+}
+
+element alternate.active {
+        background-color: @active-background;
+        text-color:       @active-foreground;
+}
+
+button {
+        padding: 10px;
+}
+
+button selected {
+    background-color: @selected-urgent-background;
+        text-color:       @background-color;
+}
+
+
+
+/* vim: ft=css
