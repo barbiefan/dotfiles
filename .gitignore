@@ -19,6 +19,7 @@
 .cargo/*
 .cache/*
 Desktop/*
+.bins/wallpaperpath
 Downloads/*
 go/*
 Music/*
@@ -36,6 +37,11 @@ windows/*
 .config/fcast-receiver/*
 .config/discord/*
 .config/GIMP/*
+.config/gtk-2.0/*
+.config/gtk-3.0/*
+.config/gtk-4.0/*
+.config/qt5ct/*
+.config/qt6ct/*
 .local/*
 !.local/share
 .local/share/*
@@ -48,6 +54,7 @@ Documents/git/*
 !Documents/VPN
 Documents/VPN/nlmk
 .ssh
+.themes/*
 
 .config/.semgrep/semgrep.log
 .config/.semgrep/settings.yml
