@@ -42,6 +42,8 @@ windows/*
 !.local/share/rofi
 .themes/Default/*
 Documents/*
+!Documents/git/
+Documents/git/*
 !Documents/git/StartPage/
 !Documents/VPN
 Documents/VPN/nlmk

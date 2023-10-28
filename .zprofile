@@ -17,7 +17,6 @@ export TERMINAL=alacritty
 export NO_AT_BRIDGE=1
 export YTFZF_THUMB_DISP_METHOD='chafa'
 export PATH="$PATH:$HOME/.bins"
-export ETH=$(route | tail -n 1 | awk '{print $8}')
 #mount NAS drive if is there
 #
 if [ -z "${DISPLAY}" ] && [ "$(tty)" = "/dev/tty1" ]; then

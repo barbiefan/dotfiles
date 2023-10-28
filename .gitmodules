@@ -1,6 +1,6 @@
 [submodule "Documents/git/StartPage"]
 	path = Documents/git/StartPage
-	url = https://github.com/barbiefan/StartPage.git
+	url = git@github.com:barbiefan/StartPage.git
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = git@github.com:barbiefan/nvim_config.git
@@ -13,3 +13,6 @@
 [submodule ".password-store"]
 	path = .password-store
 	url = git@github.com:barbiefan/pass.git
+[submodule "StartPage"]
+	path = StartPage
+	url = git@github.com:barbiefan/StartPage.git
