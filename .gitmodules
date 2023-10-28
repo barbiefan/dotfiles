@@ -1,18 +1,24 @@
 [submodule "Documents/git/StartPage"]
 	path = Documents/git/StartPage
 	url = git@github.com:barbiefan/StartPage.git
+	branch = master
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = git@github.com:barbiefan/nvim_config.git
+	branch = master
 [submodule ".bins/steam_theme"]
 	path = .bins/steam_theme
 	url = git@github.com:barbiefan/steam_theme.git
+	branch = master
 [submodule "Pictures/wallpaper"]
 	path = Pictures/wallpaper
 	url = git@github.com:barbiefan/wallpapers.git
+	branch = master
 [submodule ".password-store"]
 	path = .password-store
 	url = git@github.com:barbiefan/pass.git
+	branch = master
 [submodule "StartPage"]
 	path = StartPage
 	url = git@github.com:barbiefan/StartPage.git
+	branch = master
