@@ -118,4 +118,4 @@ side_apps
 echo "$filename" > $HOME/.bins/wallpaperpath
 printf "wallpaper remembered in $HOME/.bins/wallpaperpath\n"
 
-notification "Wallpaper:" "Set colors and themes to match wallpaper: $filename" low
+notify-send "Wallpaper" "Set colors and themes to match wallpaper: $filename" --urgency LOW -i $filename

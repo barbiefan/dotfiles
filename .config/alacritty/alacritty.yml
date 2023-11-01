@@ -64,29 +64,29 @@ draw_bold_text_with_bright_colors: true
 # BEGIN ACE
 colors:
   primary:
-    background: '#0f0f0f'
-    foreground: '#d4d4d4'
+    background: '#160c16'
+    foreground: '#e4d4da'
   cursor:
-    text:       '#0f0f0f'
-    cursor:     '#d4d4d4'
+    text:       '#160c16'
+    cursor:     '#e4d4da'
   normal:
-    black:      '#0f0f0f'
-    red:        '#933737'
-    green:      '#A23D3D'
-    yellow:     '#994848'
-    blue:       '#7B7F80'
-    magenta:    '#7C8080'
-    cyan:       '#8D8D8D'
-    white:      '#d4d4d4'
+    black:      '#160c16'
+    red:        '#628C95'
+    green:      '#9D909D'
+    yellow:     '#9CA4AE'
+    blue:       '#A8ADB5'
+    magenta:    '#D3A1A2'
+    cyan:       '#BBBCC4'
+    white:      '#e4d4da'
   bright:
-    black:      '#949494'
-    red:        '#933737'
-    green:      '#A23D3D'
-    yellow:     '#994848'
-    blue:       '#7B7F80'
-    magenta:    '#7C8080'
-    cyan:       '#8D8D8D'
-    white:      '#d4d4d4'
+    black:      '#9f9498'
+    red:        '#628C95'
+    green:      '#9D909D'
+    yellow:     '#9CA4AE'
+    blue:       '#A8ADB5'
+    magenta:    '#D3A1A2'
+    cyan:       '#BBBCC4'
+    white:      '#e4d4da'
   
   indexed_colors:
     - { index: 16, color: "0xECBFBD" }
