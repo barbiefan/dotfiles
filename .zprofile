@@ -13,6 +13,7 @@ export GBM_BACKEND=nvidia-drm
 export __GLX_VENDOR_LIBRARY_NAME=nvidia
 export WLR_NO_HARDWARE_CURSORS=1
 export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
 export TERMINAL=alacritty
 export NO_AT_BRIDGE=1
 export YTFZF_THUMB_DISP_METHOD='chafa'

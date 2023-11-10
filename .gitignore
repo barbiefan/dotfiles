@@ -147,3 +147,6 @@ Documents/VPN/nlmk
 .zsh/cache/SYS_ALL_UNITS--user
 .zsh/cache/SYS_REALLY_ALL_UNITS--system
 .zsh/cache/SYS_REALLY_ALL_UNITS--user
+.config/autostart/remmina-applet.desktop
+.config/freerdp/known_hosts2
+.config/remmina/remmina.pref
