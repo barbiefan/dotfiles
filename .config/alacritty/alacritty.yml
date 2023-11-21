@@ -2,7 +2,7 @@ env:
   TERM: xterm-256color
 
 window:
-  opacity: 0.7
+  opacity: 0.5
 
   padding:
     x: 0
@@ -64,29 +64,29 @@ draw_bold_text_with_bright_colors: true
 # BEGIN ACE
 colors:
   primary:
-    background: '#0d0f11'
-    foreground: '#dcdedf'
+    background: '#0f1016'
+    foreground: '#b4c8f2'
   cursor:
-    text:       '#0d0f11'
-    cursor:     '#dcdedf'
+    text:       '#0f1016'
+    cursor:     '#b4c8f2'
   normal:
-    black:      '#0d0f11'
-    red:        '#787E82'
-    green:      '#7D8286'
-    yellow:     '#8B9094'
-    blue:       '#9BA0A3'
-    magenta:    '#ABB0B3'
-    cyan:       '#BCC0C3'
-    white:      '#dcdedf'
+    black:      '#0f1016'
+    red:        '#707EC1'
+    green:      '#9B6FA4'
+    yellow:     '#E57594'
+    blue:       '#997DC9'
+    magenta:    '#7383B6'
+    cyan:       '#7394E0'
+    white:      '#b4c8f2'
   bright:
-    black:      '#9a9b9c'
-    red:        '#787E82'
-    green:      '#7D8286'
-    yellow:     '#8B9094'
-    blue:       '#9BA0A3'
-    magenta:    '#ABB0B3'
-    cyan:       '#BCC0C3'
-    white:      '#dcdedf'
+    black:      '#7d8ca9'
+    red:        '#707EC1'
+    green:      '#9B6FA4'
+    yellow:     '#E57594'
+    blue:       '#997DC9'
+    magenta:    '#7383B6'
+    cyan:       '#7394E0'
+    white:      '#b4c8f2'
   
   indexed_colors:
     - { index: 16, color: "0xECBFBD" }

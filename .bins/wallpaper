@@ -9,9 +9,15 @@ change_wallpaper() {
     swww img "$filename" --transition-type grow --transition-pos 365,1395 --transition-step 255 --transition-fps 255 --transition-duration 1
 }
 
+firefox_theme() {
+    pywalfox update
+    printf "firefox done\n"
+}
+
 ##### discord #####
 discord_theme() {
     pywal-discord -p $HOME/.cache/wal
+    printf "discord done\n"
 }
 
 ##### steam #####
@@ -74,6 +80,7 @@ StartPage_theme() {
 
 side_apps() {
     discord_theme &
+    firefox_theme &
     steam_theme &
     waybar_theme &
     swaync_theme &

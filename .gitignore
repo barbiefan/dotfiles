@@ -150,3 +150,4 @@ Documents/VPN/nlmk
 .config/autostart/remmina-applet.desktop
 .config/freerdp/known_hosts2
 .config/remmina/remmina.pref
+.docker/config.json

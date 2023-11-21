@@ -51,9 +51,6 @@
 		  "default": "",
 		  "special": "⭐"
 	  },
-	  "persistent_workspaces": {
-      "*": 10,
-	  },
   },
 
   "hyprland/window": {
